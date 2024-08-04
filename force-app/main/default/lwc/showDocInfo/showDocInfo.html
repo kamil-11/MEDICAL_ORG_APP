@@ -1,0 +1,26 @@
+<template>
+    <lightning-card class="slds-var-m-around_medium slds-has-bottom-magnet">
+        <h3 slot="title">
+            <lightning-icon icon-name="custom:custom86" size="medium"></lightning-icon>
+             <span class="slds-var-m-left_medium">Physician Informations</span> 
+        </h3>
+        <lightning-record-view-form object-api-name="Interactions__c" record-id={recordId}>    
+            <div class="slds-grid slds-gutters slds-m-right_medium">
+                <div class="slds-columns slds-size_12-of-12 slds-var-m-left_medium">
+                    <div class="slds-border_bottom slds-var-m-around_small"> 
+                    <p class="slds-text-color_inverse slds-text-title_bold"><lightning-output-field field-name="Physician_Name__c"></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_small">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name="Contact_Number__c"></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_small">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name="Email__c"></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_small">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name="Medical_Center__c"></lightning-output-field></p>
+                    </div>
+                </div>
+            </div>
+        </lightning-record-view-form>
+    </lightning-card>
+</template>

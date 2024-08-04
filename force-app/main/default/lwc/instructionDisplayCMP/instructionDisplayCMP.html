@@ -1,0 +1,49 @@
+<template>
+    <lightning-card class="slds-var-m-around_medium slds-has-top-magnet">
+        <h3 slot="title">
+             <lightning-icon icon-name="standard:slack_conversations" size="medium"></lightning-icon> 
+             <span class="slds-var-m-left_medium">Quick Status Update upon Interactions</span> 
+        </h3>
+        <lightning-record-edit-form object-api-name="Interactions__c" record-id={recordId}>
+            <div class="slds-grid slds-gutters slds-m-right_medium">
+                <div class="slds-columns slds-size_6-of-12 slds-var-m-left_medium">
+                    <div class="slds-border_bottom slds-var-m-around_large"> 
+                    <p class="slds-text-color_inverse slds-text-title_bold"><lightning-output-field field-name={fields.namefield}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.physicianField}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-font_monospace"><lightning-input-field field-name={fields.notesField}></lightning-input-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.channelField}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.medicalEnquiryFiel}></lightning-output-field></p>
+                    </div>
+                </div>
+                <div class="slds-columns slds-size_6-of-12 slds-var-m-left_medium">
+                    <div class="slds-border_bottom slds-var-m-around_large"> 
+                    <p class="slds-text-color_inverse slds-text-title_bold"><lightning-input-field field-name={fields.statusField}></lightning-input-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.createdByField}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.lastModifiedByField}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.lastModifiedDateField}></lightning-output-field></p>
+                    </div>
+                    <div class="slds-border_bottom slds-var-m-around_medium">
+                        <p class="slds-text-title_bold"><lightning-output-field field-name={fields.ownerIDField}></lightning-output-field></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-align_absolute-center">
+            <lightning-button class="slds-m-around_medium" variant="Brand" type="submit" label="Change Status" onclick={handler}></lightning-button>
+            </div>    
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>
