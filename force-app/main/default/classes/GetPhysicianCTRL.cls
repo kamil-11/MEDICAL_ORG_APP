@@ -1,7 +1,7 @@
 /* 
     @author	Kamil kamran
     @date	05/08/2024
-    @group	EQNUIRY STATUS UPDATE
+    @group	UI_ENHNANCEMENT
     @description Aura Enabled Apex Controller for Upcomming Versions of LWC (Phase II) - for adding Search Component on
     Interactions Object This will enhance the user Interphase
      */

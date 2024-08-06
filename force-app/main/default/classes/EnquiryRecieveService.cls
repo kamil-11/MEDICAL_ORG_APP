@@ -12,6 +12,10 @@
 @RestResource(urlMapping = '/Enquiry/*')
 global class EnquiryRecieveService {
 
+    /*
+    Enquiry POST APEX webService for allowing Commercial orgs to post Enquiry and Physician and medical professional details on the 
+    Medical Org.
+    */
     @HttpPost
     global static void postEnquiry()
     {
@@ -40,7 +44,7 @@ global class EnquiryRecieveService {
         catch(exception e)
         {
             System.debug(e.getMessage() + ' Caused By - ' + e.getCause());
-            // If there were a phase II I would refactor this with part with properly Logging the ddebug lines with
+            // If there were a phase II I would refactor this with  properly Logging the debug lines with
             //Interface Logger Class.
 
         }
@@ -64,16 +68,20 @@ global class EnquiryRecieveService {
            }  
     }
 
+    // Method for parsing contents from Rich Text Editor 
+    // Move to String Utility Class in Next Phase
     public static String stringParsegUtility(String queryString)
         {
-            String s2;
+            String concatinatedQuestionString='';
             String[] splittedQueryList = queryString.split('</p>');
             for(string IndividualQuestions : splittedQueryList)
             {
-            s2 = IndividualQuestions.replace('<p>', 'Question. - ');
-            s2 = s2+'\r\n';
+            String localString=''; 
+            localString = IndividualQuestions.replace('<p>', 'Question. - ');
+            localString+='\r\n';
+            concatinatedQuestionString += localString;
             }
-            return s2;
+            return concatinatedQuestionString;
         }
 }
 

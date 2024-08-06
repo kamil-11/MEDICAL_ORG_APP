@@ -6,6 +6,12 @@
     @version 1.0
      */
     // Status Deployed
+
+    /*
+    User Defined Apex Objects to parse the HTTP Response. Consist of combined Physician and Enquiry details,
+    Isolated class and not inner class as during different phases changes on the data model or the Server's parsing logic JSON 
+    can be easiliy accomodated. 
+    */
 public class EnquiryRawData{
     public String PrefferredResponseChannel;	
     public String MedicalCenter;	
