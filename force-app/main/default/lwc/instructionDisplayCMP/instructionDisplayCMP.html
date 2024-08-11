@@ -2,11 +2,11 @@
     <lightning-card class="slds-var-m-around_medium slds-has-top-magnet">
         <h3 slot="title">
              <lightning-icon icon-name="standard:slack_conversations" size="medium"></lightning-icon> 
-             <span class="slds-var-m-left_medium">Quick Status Update upon Interactions</span> 
+             <span class="slds-var-m-left_medium slds-text-font_monospace">Quick Status Update upon Interactions</span> 
         </h3>
         <lightning-record-edit-form object-api-name="Interactions__c" record-id={recordId}>
-            <div class="slds-grid slds-gutters slds-m-right_medium">
-                <div class="slds-columns slds-size_6-of-12 slds-var-m-left_medium">
+            <div class="slds-grid slds-gutters slds-var-m-right_medium">
+                <div class="slds-col slds-size_6-of-12 slds-var-m-left_medium">
                     <div class="slds-border_bottom slds-var-m-around_large"> 
                     <p class="slds-text-color_inverse slds-text-title_bold"><lightning-output-field field-name={fields.namefield}></lightning-output-field></p>
                     </div>
@@ -23,7 +23,7 @@
                         <p class="slds-text-title_bold"><lightning-output-field field-name={fields.medicalEnquiryFiel}></lightning-output-field></p>
                     </div>
                 </div>
-                <div class="slds-columns slds-size_6-of-12 slds-var-m-left_medium">
+                <div class="slds-col slds-size_6-of-12 slds-var-m-left_medium">
                     <div class="slds-border_bottom slds-var-m-around_large"> 
                     <p class="slds-text-color_inverse slds-text-title_bold"><lightning-input-field field-name={fields.statusField}></lightning-input-field></p>
                     </div>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="slds-align_absolute-center">
-            <lightning-button class="slds-m-around_medium" variant="Brand" type="submit" label="Change Status" onclick={handler}></lightning-button>
+            <lightning-button class="slds-var-m-around_medium" variant="Brand" type="submit" label="Change Status" onclick={handler}></lightning-button>
             </div>    
         </lightning-record-edit-form>
     </lightning-card>

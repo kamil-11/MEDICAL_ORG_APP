@@ -4,7 +4,7 @@
             <lightning-icon icon-name="custom:custom86" size="medium"></lightning-icon>
              <span class="slds-var-m-left_medium">Physician Informations</span> 
         </h3>
-        <div class="slds-var-m-around_medium"><lightning-input type="search" label="Search" class="slds-m-bottom_medium" onchange={handleKeyChange}>
+        <div class="slds-var-m-around_medium"><lightning-input type="search" label="Search" class="slds-var-m-bottom_medium" onchange={handleKeyChange}>
         </lightning-input></div>
         <template lwc:if={Physician.data}>
             <template for:each={Physician.data} for:item="Phys">
